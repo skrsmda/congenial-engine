@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1010/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true        #将IP注册到Eureka Server上
+    instance-id: config-server    #用该名代替ip名
+server:
+  port: 1030
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/skrsmda/congenial-engine.git
+          username: congenial-engine
+          password: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIjC37DUwWb3uQb0sYOe8WR3STlRNQ0mlBS96b9oLFxm 3431817174@qq.com
